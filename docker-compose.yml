@@ -1,0 +1,13 @@
+version: '3.7'
+services:
+  swoole:
+    environment:
+       AUTORELOAD_PROGRAMS: "swoole"
+       AUTORELOAD_ANY_FILES: 1
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - ./:/var/www
+    ports:
+     - "8069:9501"

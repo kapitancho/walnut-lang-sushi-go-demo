@@ -1,0 +1,193 @@
+html, body {
+	margin: 0;
+	padding: 0;
+	font-family: 'Roboto', Serif;
+}
+
+#tables:not([hidden]) {
+	display: grid;
+	grid-template-columns: repeat(4, 200px);
+}
+#tables li {
+	list-style-type: none;
+	text-align: center;
+	margin: 10px;
+	padding: 5px;
+	border: dashed 1px #060;
+}
+.play-move-link:not([hidden]),
+.back-to-tables-link:not([hidden]) {
+	display: inline-block;
+	text-align: center;
+	margin: 10px;
+	padding: 5px;
+	text-decoration: none;
+	border: dashed 1px #060;
+}
+.play-move-link.played {
+	display: none;
+}
+#tables li a {
+	display: block;
+	font-weight: bold;
+	margin: 5px 0;
+	text-decoration: none;
+	padding: 5px;
+}
+.join-link {
+	background: #060;
+	color: white;
+}
+.leave-link {
+	background: #600;
+	color: white;
+}
+.start-link {
+	background: #006;
+	color: white;
+}
+.new-table-link {
+	background: #660;
+	color: white;
+}
+.game-link {
+	background: #606;
+	color: white;
+}
+.play-move-link {
+	background: gold;
+	color: white;
+}
+.back-to-tables-link {
+	background: #6A6;
+	color: white;
+}
+.enough-players {
+	color: green;
+}
+.not-enough-players {
+	color: red;
+}
+#current-error {
+    color: red;
+}
+
+
+.game-round h3 {
+	text-align: center;
+}
+
+.player-cards {
+    margin: 4px;
+    display: grid;
+    grid-template-columns: repeat(5, auto);
+	justify-content: center;
+}
+@media (max-width: 960px) {
+    .player-cards {
+        grid-template-columns: repeat(4, auto);
+    }
+    .player-cards .own-cards {
+        grid-column: span 4;
+    }
+}
+sushi-go-card {
+}
+.own-cards h4 {
+	display: flex;
+	align-items: center;
+	height: 40px;
+}
+.own-cards .cards {
+    display: grid;
+    grid-template-columns: repeat(5, auto);
+    grid-gap: 10px;
+}
+.own-cards .cards sushi-go-card {
+	transition: transform 0.2s ease;
+	will-change: transform;
+}
+.own-cards .cards .selected {
+	transform: scale(1.1) rotate(4deg);
+}
+.other-player-cards .cards {
+    position: relative;
+    --other-card-width: 80px;
+    --other-card-height: 30px;
+    --other-card-h-offset: 4px;
+    --other-card-v-offset: 24px;
+    width: calc(20px + var(--other-card-width) + 7 * var(--other-card-h-offset));
+    height: calc(5 * var(--other-card-height) + 7 * var(--other-card-v-offset));
+}
+@media (max-width: 960px) {
+    .other-player-cards .cards {
+        --other-card-width: 40px;
+        --other-card-height: 15px;
+        --other-card-h-offset: 2px;
+        --other-card-v-offset: 12px;
+    }
+}
+.other-player-cards sushi-go-card {
+    position: absolute;
+    width: var(--other-card-width);
+    height: var(--other-card-height);
+}
+.cardsx {
+	display: grid;
+	justify-items: center;
+	grid-template-columns: repeat(6, 1fr);
+	grid-gap: 20px;
+}
+.player {
+
+}
+
+
+.piles {
+	display: grid;
+	/*grid-template-columns: repeat(auto-fill, 120px);*/
+	grid-template-columns: repeat(11, auto);
+}
+.pile {
+	position: relative;
+    --other-card-width: 80px;
+    --other-card-height: 30px;
+    --other-card-h-offset: 4px;
+    --other-card-v-offset: 24px;
+    width: calc(20px + var(--other-card-width) + 7 * var(--other-card-h-offset));
+    height: calc(5 * var(--other-card-height) + 7 * var(--other-card-v-offset));
+
+}
+@media (max-width: 960px) {
+	.pile {
+		--other-card-width: 40px;
+		--other-card-height: 15px;
+		--other-card-h-offset: 2px;
+		--other-card-v-offset: 12px;
+	}
+}
+.pile sushi-go-card {
+	position: absolute;
+	width: var(--other-card-width);
+	height: var(--other-card-height);
+}
+
+.tempura-pile sushi-go-card:last-child:nth-child(2n + 1),
+.sashimi-pile sushi-go-card:nth-last-child(2):nth-child(3n + 1),
+.sashimi-pile sushi-go-card:last-child:nth-child(3n + 1),
+.sashimi-pile sushi-go-card:last-child:nth-child(3n + 2),
+.dumpling-pile sushi-go-card:nth-child(n + 6) {
+	filter: grayscale(90%);
+}
+
+#game-view > .rounds {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+}
+
+#game-view > .rounds > div {
+	margin: 5px;
+	border: solid 2px firebrick;
+	padding: 5px;
+	background: #EEE;
+}

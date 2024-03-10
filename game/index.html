@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Sushi Go!</title>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet" />
+		<link rel="stylesheet" type="text/css" href="assets/style.css" />
+	</head>
+	<body>
+		<div>
+			<h1>Sushi Go!</h1>
+			<div class="name-form">
+				<label>
+					<input type="text" required placeholder="Enter your name" id="name" />
+				</label>
+				<span id="current-error"></span>
+			</div>
+		</div>
+		<ul id="tables"></ul>
+		<div id="game-view"></div>
+
+
+		<script type="module" src="assets/scripts/sushi-go-card.js"></script>
+		<script type="module">
+			/**
+			 * @var {Client} clientProxy
+			 */
+			import clientProxy from './assets/scripts/boot.js';
+			window.clientProxy = clientProxy;
+
+			import tableList from './assets/scripts/table-list.js';
+			tableList(document.getElementById('tables'));
+
+			import gameView from './assets/scripts/game-view.js';
+			gameView(document.getElementById('game-view'));
+		</script>
+		<style><!-- generated -->
+		    .other-player-cards sushi-go-card:nth-child(1) {
+		        top: calc(0 * var(--other-card-v-offset));
+		        left: calc(0 * var(--other-card-h-offset));
+		    }
+		    .other-player-cards sushi-go-card:nth-child(2) {
+		        top: calc(1 * var(--other-card-v-offset));
+		        left: calc(1 * var(--other-card-h-offset));
+		    }
+		    .other-player-cards sushi-go-card:nth-child(3) {
+		        top: calc(2 * var(--other-card-v-offset));
+		        left: calc(2 * var(--other-card-h-offset));
+		    }
+		    .other-player-cards sushi-go-card:nth-child(4) {
+		        top: calc(3 * var(--other-card-v-offset));
+		        left: calc(3 * var(--other-card-h-offset));
+		    }
+		    .other-player-cards sushi-go-card:nth-child(5) {
+		        top: calc(4 * var(--other-card-v-offset));
+		        left: calc(4 * var(--other-card-h-offset));
+		    }
+		    .other-player-cards sushi-go-card:nth-child(6) {
+		        top: calc(5 * var(--other-card-v-offset));
+		        left: calc(5 * var(--other-card-h-offset));
+		    }
+		    .other-player-cards sushi-go-card:nth-child(7) {
+		        top: calc(6 * var(--other-card-v-offset));
+		        left: calc(6 * var(--other-card-h-offset));
+		    }
+		    .other-player-cards sushi-go-card:nth-child(8) {
+		        top: calc(7 * var(--other-card-v-offset));
+		        left: calc(7 * var(--other-card-h-offset));
+		    }
+		    .other-player-cards sushi-go-card:nth-child(9) {
+		        top: calc(8 * var(--other-card-v-offset));
+		        left: calc(8 * var(--other-card-h-offset));
+		    }
+		    .other-player-cards sushi-go-card:nth-child(10) {
+		        top: calc(9 * var(--other-card-v-offset));
+		        left: calc(9 * var(--other-card-h-offset));
+		    }
+			.pile sushi-go-card:nth-child(1) {
+	           top: calc(0 * var(--other-card-v-offset));
+	           left: calc(0 * var(--other-card-h-offset));
+	       }
+			.pile sushi-go-card:nth-child(2) {
+	           top: calc(1 * var(--other-card-v-offset));
+	           left: calc(1 * var(--other-card-h-offset));
+	       }
+			.pile sushi-go-card:nth-child(3) {
+	           top: calc(2 * var(--other-card-v-offset));
+	           left: calc(2 * var(--other-card-h-offset));
+	       }
+			.pile sushi-go-card:nth-child(4) {
+	           top: calc(3 * var(--other-card-v-offset));
+	           left: calc(3 * var(--other-card-h-offset));
+	       }
+	       .pile sushi-go-card:nth-child(5) {
+	           top: calc(4 * var(--other-card-v-offset));
+	           left: calc(4 * var(--other-card-h-offset));
+	       }
+	       .pile sushi-go-card:nth-child(6) {
+	           top: calc(5 * var(--other-card-v-offset));
+	           left: calc(5 * var(--other-card-h-offset));
+	       }
+	       .pile sushi-go-card:nth-child(7) {
+	           top: calc(6 * var(--other-card-v-offset));
+	           left: calc(6 * var(--other-card-h-offset));
+	       }
+	       .pile sushi-go-card:nth-child(8) {
+	           top: calc(7 * var(--other-card-v-offset));
+	           left: calc(7 * var(--other-card-h-offset));
+	       }
+	       .pile sushi-go-card:nth-child(9) {
+	           top: calc(8 * var(--other-card-v-offset));
+	           left: calc(8 * var(--other-card-h-offset));
+	       }
+	       .pile sushi-go-card:nth-child(10) {
+	           top: calc(9 * var(--other-card-v-offset));
+	           left: calc(9 * var(--other-card-h-offset));
+	       }
+		</style>
+	</body>
+</html>

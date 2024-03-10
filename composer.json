@@ -1,0 +1,19 @@
+{
+    "name": "kapitancho/walnut-lang-demos",
+    "autoload": {},
+    "authors": [
+        {
+            "name": "Marian Kostadinov",
+            "email": "manchokapitancho@gmail.com"
+        }
+    ],
+    "config": {
+        "platform": {
+            "ext-swoole": "5.0"
+        }
+    },
+    "require": {
+        "php": ">=8.2",
+        "kapitancho/walnut-lang-swoole-http-adapter": "^0.0.1"
+	}
+}
