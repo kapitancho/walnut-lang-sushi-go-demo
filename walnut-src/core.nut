@@ -10,7 +10,7 @@ PlusInfinity = :[];
 
 /* dependency container */
 DependencyContainer = :[];
-DependencyContainerError = $[targetType: Type, errorMessage: String];
+DependencyContainerError = $[targetType: Type, errorOnType: Type, errorMessage: String];
 DependencyContainerError->errorMessage(^Null => String) :: $.errorMessage;
 DependencyContainerError->targetType(^Null => Type) :: $.targetType;
 

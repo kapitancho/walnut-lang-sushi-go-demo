@@ -388,7 +388,8 @@ ActiveGame->playMove(^[~PlayerId, ~PlayerMove] => Result<ActiveGame|CompletedGam
                             },
                             ~: $ /* TODO */
                         }
-                    }
+                    },
+                    ~: $ /* TODO */
                 }
             },
             ~: $

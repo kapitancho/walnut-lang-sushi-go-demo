@@ -60,13 +60,13 @@ NotFoundHandler ==> HttpRequestHandler %% CreateHttpResponse :: {
     ^[request: HttpRequest] => Result<HttpResponse, Any> :: %(404)
 };
 
-UncaughtExceptionHandler <: [~CreateHttpResponse];
-UncaughtExceptionHandler ==> HttpMiddleware :: {
+UncaughtExceptionHandler = :[];
+UncaughtExceptionHandler ==> HttpMiddleware %% CreateHttpResponse :: {
     ^[request: HttpRequest, handler: HttpRequestHandler] => HttpResponse :: {
         result = #.handler[#.request];
         ?whenTypeOf(result) is {
-            type{HttpResponse}: result/*,
-            ~: ?noError($.createHttpResponse.createResponse(500))*/
+            type{HttpResponse}: result,
+            ~: %(500)
         }
     }
 };

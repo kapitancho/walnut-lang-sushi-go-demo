@@ -1,4 +1,4 @@
-module sushi-go-config %% sushi-go-model, http-middleware:
+module sushi-go-config %% sushi-go-model, sushi-go-http, http-middleware:
 
 ==> Playroom :: Playroom(null);
 
